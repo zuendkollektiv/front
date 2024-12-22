@@ -87,17 +87,14 @@ export function References() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  relative
-                  inline-block
-                  hover:bg-gradient-to-r
-                  hover:from-red-500
-                  hover:to-yellow-400
-                  hover:text-transparent
-                  hover:bg-clip-text
-                  transition-all
-                  duration-300
-                  ease-in-out
-                  bg-clip-text
+                relative
+                inline-block
+                transition-all
+                ease-in-out
+                text-white
+                hover:text-orange-500
+                hover:font-bold
+                duration-300
                 "
               >
                 <span className="relative z-10">{ref.name}</span>
