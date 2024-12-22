@@ -60,7 +60,7 @@ export function HeroSlider() {
           <div className="relative">
             {/* Blur and dark overlay */}
             <div
-              className="absolute inset-0 -m-96"
+              className="absolute inset-0 -m-[600px]"
               style={{
                 background: `
                 radial-gradient(
