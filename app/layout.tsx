@@ -15,6 +15,61 @@ export const metadata: Metadata = {
   title: "zündkollektiv",
   description:
     "we are a collective of artists and technicians constantly exploring and pushing the boundaries of explosives and fire as means of artistic expression.",
+  generator: "Next.js",
+  applicationName: "zündkollektiv",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "art collective",
+    "fire art",
+    "pyrotechnics",
+    "artistic expression",
+    "explosives art",
+    "performance art",
+    "zündkollektiv",
+  ],
+  authors: [{ name: "zündkollektiv" }],
+  colorScheme: "dark",
+  creator: "zündkollektiv",
+  publisher: "zündkollektiv",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://zuendkollektiv.org"), // Replace with your actual domain
+
+  alternates: {
+    canonical: "/",
+  },
+  // Open Graph
+  openGraph: {
+    title: "zündkollektiv",
+    description:
+      "we are a collective of artists and technicians constantly exploring and pushing the boundaries of explosives and fire as means of artistic expression.",
+    url: "https://zuendkollektiv.org", // Replace with your actual domain
+    siteName: "zündkollektiv",
+    images: [
+      {
+        url: "/og-image.jpg", // Make sure to add this image to your public folder
+        width: 1200,
+        height: 630,
+        alt: "zündkollektiv",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  // Twitter
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: "zündkollektiv",
+  //   description:
+  //     "we are a collective of artists and technicians constantly exploring and pushing the boundaries of explosives and fire as means of artistic expression.",
+  //   creator: "@zuendkollektiv", // Replace with your actual Twitter handle
+  //   images: ["/twitter-image.jpg"], // Make sure to add this image to your public folder
+  // },
+
+  // Icons
   icons: {
     icon: [
       {
