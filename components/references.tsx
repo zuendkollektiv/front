@@ -1,0 +1,120 @@
+import Link from "next/link";
+
+interface Reference {
+  name: string;
+  url: string;
+}
+
+const refs: Reference[] = [
+  {
+    name: "4gb (georgia)",
+    url: "https://www.4gb.ge/",
+  },
+  {
+    name: "at.tension festival",
+    url: "https://www.attension-festival.de/",
+  },
+  {
+    name: "bauhaus university",
+    url: "https://www.uni-weimar.de/en/",
+  },
+  {
+    name: "bucht der träumer",
+    url: "https://buchtdertraeumer.de/",
+  },
+  {
+    name: "chaos communication congress",
+    url: "https://www.ccc.de/en/",
+  },
+  {
+    name: "feria internacional de la pirotecnia (mexico)",
+    url: "https://feriadelapirotecnia.com/",
+  },
+  {
+    name: "fusion festival",
+    url: "https://www.fusion-festival.de/",
+  },
+  {
+    name: "julian charriere",
+    url: "https://juliancharriere.net/",
+  },
+  {
+    name: "kater blau",
+    url: "https://katerblau.de/",
+  },
+  {
+    name: "kunstfest weimar",
+    url: "https://www.kunstfest-weimar.de/",
+  },
+  {
+    name: "locolor",
+    url: "https://locolor.de/",
+  },
+  {
+    name: "mensch meier",
+    url: "https://menschmeier.berlin/",
+  },
+  {
+    name: "mjut",
+    url: "https://www.mjut.de/",
+  },
+  {
+    name: "off the radar",
+    url: "https://www.offtheradar.de/",
+  },
+  {
+    name: "theater titanick",
+    url: "https://www.titanick.de/",
+  },
+  {
+    name: "theaterdiscounter",
+    url: "https://theaterdiscounter.de/",
+  },
+];
+
+export function References() {
+  return (
+    <section className="bg-black py-16">
+      <div className="container mx-auto px-4">
+        {/* <h2 className="mb-8 text-center text-3xl font-bold font-mono">
+          references
+        </h2> */}
+        <div className="text-center font-mono max-w-4xl mx-auto">
+          {refs.map((ref, index) => (
+            <span key={ref.name}>
+              <Link
+                href={ref.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  relative
+                  inline-block
+                  hover:bg-gradient-to-r
+                  hover:from-red-500
+                  hover:to-yellow-400
+                  hover:text-transparent
+                  hover:bg-clip-text
+                  transition-all
+                  duration-300
+                  ease-in-out
+                  bg-clip-text
+                "
+              >
+                <span className="relative z-10">{ref.name}</span>
+                <span
+                  className="
+                  absolute
+                  -inset-4
+                "
+                ></span>
+              </Link>
+              {index < refs.length - 1 && (
+                <span className="mx-2 text-gray-600">{"//"}</span>
+              )}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
