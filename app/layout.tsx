@@ -59,6 +59,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+
   // Twitter
   // twitter: {
   //   card: "summary_large_image",
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
   //   description:
   //     "we are a collective of artists and technicians constantly exploring and pushing the boundaries of explosives and fire as means of artistic expression.",
   //   creator: "@zuendkollektiv", // Replace with your actual Twitter handle
-  //   images: ["/twitter-image.jpg"], // Make sure to add this image to your public folder
+  //   images: ["/og-image.jpg"], // Make sure to add this image to your public folder
   // },
 
   // Icons
