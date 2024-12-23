@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google";
+import { Pirata_One, Geist, Azeret_Mono as Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 
 const geistSans = Geist({
@@ -9,6 +9,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+});
+const pirataOne = Pirata_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-pirata",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +33,6 @@ export const metadata: Metadata = {
     "zündkollektiv",
   ],
   authors: [{ name: "zündkollektiv" }],
-  colorScheme: "dark",
   creator: "zündkollektiv",
   publisher: "zündkollektiv",
   formatDetection: {
@@ -94,7 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-black text-white dark`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pirataOne.variable} font-mono antialiased bg-black text-white dark`}
       >
         {children}
       </body>

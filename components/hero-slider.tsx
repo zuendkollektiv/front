@@ -13,7 +13,16 @@ import {
 import React from "react";
 
 export function HeroSlider() {
-  const images = ["/tanzwueste.jpg", "/tanzwueste_2.jpg", "/tultepec.jpg"];
+  const [images, setImages] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    async function fetchImages() {
+      const response = await fetch("/api/images");
+      const data = await response.json();
+      setImages(data.map((file: string) => `/slider/${file}`));
+    }
+    fetchImages();
+  }, []);
 
   const plugin = React.useMemo(
     () => [
@@ -55,49 +64,42 @@ export function HeroSlider() {
         <CarouselPrevious className="left-4" />
         <CarouselNext className="right-4" />
       </Carousel>
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 pt-16">
-        <div className="max-w-2xl text-center">
-          <div className="relative">
+      <div className="absolute inset-0 flex items-center bg-black bg-opacity-50 pt-16 md:pt-96">
+        <div className="container mx-auto px-4">
+          <div className="relative max-w-md">
             {/* Blur and dark overlay */}
             <div
-              className="absolute inset-0 -m-[600px]"
+              className="absolute inset-0 -m-96"
               style={{
                 background: `
                 radial-gradient(
                   circle at center,
-                  rgba(0,0,0,0.75) 0%,
-                  rgba(0,0,0,0.74) 10%,
-                  rgba(0,0,0,0.73) 15%,
-                  rgba(0,0,0,0.70) 20%,
-                  rgba(0,0,0,0.65) 25%,
-                  rgba(0,0,0,0.60) 30%,
-                  rgba(0,0,0,0.55) 35%,
-                  rgba(0,0,0,0.49) 40%,
-                  rgba(0,0,0,0.42) 45%,
-                  rgba(0,0,0,0.35) 50%,
-                  rgba(0,0,0,0.28) 55%,
-                  rgba(0,0,0,0.21) 60%,
-                  rgba(0,0,0,0.14) 65%,
-                  rgba(0,0,0,0.07) 70%,
-                  rgba(0,0,0,0.035) 75%,
-                  rgba(0,0,0,0.017) 80%,
-                  rgba(0,0,0,0.008) 85%,
-                  rgba(0,0,0,0.004) 90%,
-                  rgba(0,0,0,0.002) 95%,
-                  transparent 100%
+                  rgba(0,0,0,0.95) 0%,
+                  rgba(0,0,0,0.75) 10%,
+                  rgba(0,0,0,0.65) 15%,
+                  rgba(0,0,0,0.60) 20%,
+                  rgba(0,0,0,0.55) 25%,
+                  rgba(0,0,0,0.50) 30%,
+                  rgba(0,0,0,0.30) 35%,
+                  rgba(0,0,0,0.20) 40%,
+                  rgba(0,0,0,0.15) 45%,
+                  rgba(0,0,0,0.10) 50%,
+                  rgba(0,0,0,0.05) 55%,
+                  transparent 60%
                   )
                 `,
               }}
             ></div>
-            <div className="relative p-8 text-white">
-              <h1 className="mb-4 text-4xl font-bold">zündkollektiv</h1>
-              <p className="font-mono">
-                we are a collective of artists and technicians constantly
-                exploring and pushing the boundaries of explosives and fire as
-                means of artistic expression. we strive for experimental and
-                artistic productions beyond the commercial show business. we are
-                based in berlin, leipzig and hamburg and are set to light up
-                spaces around the globe.
+            <div className="relative text-white">
+              <h1 className="hidden">zündkollektiv</h1>
+              <h2 className="font-pirata text-3xl mb-2">about</h2>
+              <p>
+                zündkollektiv is a collective of artists and technicians
+                constantly exploring and pushing the boundaries of explosives
+                and fire as means of artistic expression. we strive for
+                experimental and artistic productions beyond the commercial show
+                business. we are based in berlin, leipzig and hamburg and are
+                set to light up spaces around the globe.
               </p>
             </div>
           </div>
