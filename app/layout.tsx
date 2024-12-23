@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://zuendkollektiv.org"), // Replace with your actual domain
+  metadataBase: new URL("https://www.zuendkollektiv.org"), // Replace with your actual domain
 
   alternates: {
     canonical: "/",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "zündkollektiv",
     description:
       "zündkollektiv is a collective of artists and technicians constantly exploring and pushing the boundaries of explosives and fire as means of artistic expression. we strive for experimental and artistic productions beyond the commercial show business. we are based in berlin, leipzig and hamburg and are set to light up spaces around the globe.",
-    url: "https://zuendkollektiv.org", // Replace with your actual domain
+    url: "https://www.zuendkollektiv.org", // Replace with your actual domain
     siteName: "zündkollektiv",
     images: [
       {
