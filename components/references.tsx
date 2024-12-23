@@ -35,7 +35,7 @@ const refs: Reference[] = [
     url: "https://www.fusion-festival.de/",
   },
   {
-    name: "julian charriere",
+    name: "studio julian charrière",
     url: "https://julian-charriere.net/projects/controlled-burn",
   },
   {
@@ -62,10 +62,10 @@ const refs: Reference[] = [
     name: "off the radar",
     url: "https://www.offtheradar.de/",
   },
-  {
-    name: "theater titanick",
-    url: "https://www.titanick.de/",
-  },
+  // {
+  //   name: "theater titanick",
+  //   url: "https://www.titanick.de/",
+  // },
   {
     name: "theaterdiscounter",
     url: "https://theaterdiscounter.de/",
@@ -79,23 +79,24 @@ export function References() {
         <h2 className="border-t-[0.5px] border-gray-700 text-center text-4xl font-pirata p-8">
           in girum imus nocte et consumimur igni
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x-[0.5px] divide-y-[0.5px] divide-gray-700 border-b-[0.5px] border-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-b-[0.5px] border-gray-700">
           {refs.map((ref, index) => (
             <div
               key={ref.name}
-              className={`p-4 text-center flex flex-col hover:bg-gradient-to-r hover:from-red-700 hover:to-orange-600 duration-300 ${
-                index === 0 ? "border-t-[0.5px] border-gray-700" : ""
-              } `}
+              className={`p-4 text-center flex flex-col hover:bg-gradient-to-r hover:from-red-700 hover:to-orange-600 duration-300 divide-y-[0.5px] divide-gray-700 border-b-[0.5px] border-gray-700
+                ${index === 0 || index === 1 || index === 2 || index === 3 ? "border-t-[0.5px] border-gray-700" : ""}
+                ${index % 4 !== 3 ? "border-r-[0.5px] border-gray-700" : ""}
+              `}
             >
-              <Link
-                href={ref.url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
+                // href={ref.url}
+                // target="_blank"
+                // rel="noopener noreferrer"
                 className="font-mono relative transition-all ease-in-out text-white hover:text-black hover:font-pirata md:hover:text-2xl hover:text-xl flex flex-grow items-center justify-center h-12 md:text-lg text-base"
               >
                 <span className="relative z-10">{ref.name}</span>
                 <span className=" absolute -inset-4 "></span>
-              </Link>
+              </div>
             </div>
           ))}
         </div>

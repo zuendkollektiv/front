@@ -94,11 +94,11 @@ export function HeroSlider() {
               <h1 className="hidden">zündkollektiv</h1>
               <h2 className="font-pirata text-3xl mb-2">about</h2>
               <p>
-                zündkollektiv is a collective of artists and technicians
-                constantly exploring and pushing the boundaries of explosives
-                and fire as means of artistic expression. we strive for
-                experimental and artistic productions beyond the commercial show
-                business. we are based in berlin, leipzig and hamburg and are
+                zündkollektiv is a collective of artists, technicians and
+                scientists constantly exploring and pushing the boundaries of
+                explosives and fire as means of artistic expression. we strive
+                for experimental and artistic productions beyond the commercial
+                show biz. we are based in berlin, leipzig and hamburg and are
                 set to light up spaces around the globe.
               </p>
             </div>
