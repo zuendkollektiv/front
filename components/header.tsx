@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -30,7 +31,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-[0.5px] border-gray-700 ${
         isScrolled ? "bg-black shadow-md" : "bg-transparent"
       }`}
     >
@@ -62,20 +63,22 @@ export function Header() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[240px] bg-black border-black"
+                className="w-[240px] bg-black border-x-[0.5px] border-gray-700"
               >
                 <SheetHeader>
                   <SheetTitle></SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col gap-4 mt-4">
                   {navigationLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="text-lg font-mono text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
+                    <SheetClose asChild key={link.href}>
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="text-lg font-mono text-gray-400 hover:text-white transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </SheetClose>
                   ))}
                 </nav>
               </SheetContent>

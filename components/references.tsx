@@ -74,28 +74,24 @@ const refs: Reference[] = [
 
 export function References() {
   return (
-    <section className="bg-black py-16">
-      <div className="container mx-auto px-4">
-        {/* <h2 className="mb-8 text-center text-3xl font-bold font-mono">
-          references
-        </h2> */}
-        <div className="text-center font-mono max-w-4xl mx-auto">
+    <section className="bg-black">
+      <div className="">
+        <h2 className="border-t-[0.5px] border-gray-700 text-center text-4xl font-pirata p-8">
+          in girum imus nocte et consumimur igni
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x-[0.5px] divide-y-[0.5px] divide-gray-700 border-b-[0.5px] border-gray-700">
           {refs.map((ref, index) => (
-            <span key={ref.name}>
+            <div
+              key={ref.name}
+              className={`p-4 text-center flex flex-col hover:bg-gradient-to-r hover:from-red-700 hover:to-orange-600 duration-300 ${
+                index === 0 ? "border-t-[0.5px] border-gray-700" : ""
+              } `}
+            >
               <Link
                 href={ref.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                relative
-                inline-block
-                transition-all
-                ease-in-out
-                text-white
-                hover:text-orange-500
-                hover:font-bold
-                duration-300
-                "
+                className="font-mono relative transition-all ease-in-out text-white hover:text-black hover:font-pirata md:hover:text-2xl hover:text-xl flex flex-grow items-center justify-center h-12 md:text-lg text-base"
               >
                 <span className="relative z-10">{ref.name}</span>
                 <span
@@ -105,10 +101,10 @@ export function References() {
                 "
                 ></span>
               </Link>
-              {index < refs.length - 1 && (
+              {/* {index < refs.length - 1 && (
                 <span className="mx-2 text-gray-600">{"//"}</span>
-              )}
-            </span>
+              )} */}
+            </div>
           ))}
         </div>
       </div>

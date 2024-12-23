@@ -29,7 +29,7 @@ export function HeroSlider() {
       Fade(),
       Autoplay({
         delay: 5000, // 5 seconds
-        // stopOnInteraction: true, // stops auto-play on user interaction
+        stopOnInteraction: true, // stops auto-play on user interaction
         // stopOnMouseEnter: true, // optional: stops auto-play on mouse enter
       }),
     ],
@@ -61,8 +61,8 @@ export function HeroSlider() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4" />
-        <CarouselNext className="right-4" />
+        <CarouselPrevious className="left-0" />
+        <CarouselNext className="right-0" />
       </Carousel>
       <div className="absolute inset-0 flex items-center bg-black bg-opacity-50 pt-16 md:pt-96">
         <div className="container mx-auto px-4">
