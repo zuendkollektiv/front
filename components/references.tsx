@@ -28,7 +28,7 @@ const refs: Reference[] = [
   },
   {
     name: "feria internacional de la pirotecnia (mexico)",
-    url: "https://feriainternacionaldelapirotecnia.gob.mx/",
+    url: "https://feriainternacionaldelapirotecnia.gob.mx",
   },
   {
     name: "fusion festival",
