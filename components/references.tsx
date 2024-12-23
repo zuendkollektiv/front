@@ -28,7 +28,7 @@ const refs: Reference[] = [
   },
   {
     name: "feria internacional de la pirotecnia (mexico)",
-    url: "https://feriadelapirotecnia.com/",
+    url: "https://feriainternacionaldelapirotecnia.gob.mx/",
   },
   {
     name: "fusion festival",
@@ -36,7 +36,7 @@ const refs: Reference[] = [
   },
   {
     name: "julian charriere",
-    url: "https://juliancharriere.net/",
+    url: "https://julian-charriere.net/projects/controlled-burn",
   },
   {
     name: "kater blau",
