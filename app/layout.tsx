@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "zündkollektiv",
     description:
-      "we are a collective of artists and technicians constantly exploring and pushing the boundaries of explosives and fire as means of artistic expression.",
+      "zündkollektiv is a collective of artists and technicians constantly exploring and pushing the boundaries of explosives and fire as means of artistic expression. we strive for experimental and artistic productions beyond the commercial show business. we are based in berlin, leipzig and hamburg and are set to light up spaces around the globe.",
     url: "https://zuendkollektiv.org", // Replace with your actual domain
     siteName: "zündkollektiv",
     images: [
