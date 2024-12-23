@@ -24,9 +24,9 @@ export function Header() {
   }, []);
 
   const navigationLinks = [
-    { href: "#about", label: "about" },
-    { href: "#references", label: "references" },
-    { href: "#video", label: "video" },
+    { href: "/#about", label: "about" },
+    { href: "/#references", label: "references" },
+    { href: "/#action", label: "action" },
   ];
 
   return (

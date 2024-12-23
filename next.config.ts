@@ -1,13 +1,13 @@
+import { withNextVideo } from "next-video/process";
+import { withPlausibleProxy } from "next-plausible";
 import type { NextConfig } from "next";
-const { withPlausibleProxy } = require("next-plausible");
 
 const nextConfig: NextConfig = {
   /* config options here */
 };
 
-module.exports = withPlausibleProxy({
+const combinedConfig = withPlausibleProxy({
   customDomain: "https://stats.bvpk.org",
-  selfHosted: true,
 })(nextConfig);
 
-export default nextConfig;
+export default withNextVideo(combinedConfig);
