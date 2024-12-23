@@ -94,16 +94,8 @@ export function References() {
                 className="font-mono relative transition-all ease-in-out text-white hover:text-black hover:font-pirata md:hover:text-2xl hover:text-xl flex flex-grow items-center justify-center h-12 md:text-lg text-base"
               >
                 <span className="relative z-10">{ref.name}</span>
-                <span
-                  className="
-                  absolute
-                  -inset-4
-                "
-                ></span>
+                <span className=" absolute -inset-4 "></span>
               </Link>
-              {/* {index < refs.length - 1 && (
-                <span className="mx-2 text-gray-600">{"//"}</span>
-              )} */}
             </div>
           ))}
         </div>

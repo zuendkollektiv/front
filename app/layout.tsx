@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Pirata_One, Geist, Azeret_Mono as Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 
+import PlausibleProvider from "next-plausible";
+
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -97,6 +99,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <PlausibleProvider domain="zuendkollektiv.org" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pirataOne.variable} font-mono antialiased bg-black text-white dark`}
       >
