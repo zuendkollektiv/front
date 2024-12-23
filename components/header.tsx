@@ -25,8 +25,9 @@ export function Header() {
 
   const navigationLinks = [
     { href: "/#about", label: "about" },
-    { href: "/#references", label: "references" },
+    // { href: "/#references", label: "references" },
     { href: "/#action", label: "action" },
+    { href: "/imprint", label: "contact" },
   ];
 
   return (
