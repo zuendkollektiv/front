@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface Reference {
   name: string;
   url: string;
